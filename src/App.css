@@ -1,0 +1,17 @@
+.key{
+    width: 75px;
+    height: 75px;
+    margin: 3px;
+    
+}
+
+.board{
+    width: 324px;
+    height: 400px;
+    
+}
+
+.cal-container{
+    display: flex;
+
+}
