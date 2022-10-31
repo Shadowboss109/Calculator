@@ -3,6 +3,7 @@ import React from "react"
 
 class Key extends React.Component {
     render() {
+      
       return (
         <button className="key">
           {this.props.value}
@@ -16,12 +17,27 @@ class Key extends React.Component {
   }
 
   class Board extends React.Component {
+    
     render() {
+      
       return (
-        <><div  className="d-flex justify-content-center">
+        <>
+        
+        <div  className="d-flex justify-content-center">
           <h1>Calculator</h1>
-        </div><div className="d-flex justify-content-center">
+        </div>
 
+        <div className="d-flex justify-content-center">
+        <form>
+        <input
+          type="text"
+          id="new-todo-input"
+          name="text"
+          autoComplete="off"
+        />
+        </form>
+        </div>
+        <div className="d-flex justify-content-center">
             <div className="board">
               {renderKey('(')}
               {renderKey(')')}
