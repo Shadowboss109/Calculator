@@ -1,25 +1,26 @@
-import React from "react"
+import React,  { useState } from "react"
 
-
-class Key extends React.Component {
-    render() {
-      
+const Key= (props)=> {   
       return (
-        <button className="key">
-          {this.props.value}
+        <button 
+        className="key"
+        >
+          {props.val}
+
         </button>
       );
     }
-  }
   
-  function renderKey(i) {
-    return <Key value={i} />;
-  }
+  
 
-  class Board extends React.Component {
-    
-    render() {
-      
+ const Board=() =>{ 
+ 
+
+
+ 
+
+   
+
       return (
         <>
         
@@ -31,40 +32,41 @@ class Key extends React.Component {
         <form>
         <input
           type="text"
-          id="new-todo-input"
           name="text"
           autoComplete="off"
+         
         />
         </form>
         </div>
         <div className="d-flex justify-content-center">
             <div className="board">
-              {renderKey('(')}
-              {renderKey(')')}
-              {renderKey('%')}
-              {renderKey('CE')}
-              {renderKey(7)}
-              {renderKey(8)}
-              {renderKey(9)}
-              {renderKey('/')}
-              {renderKey(4)}
-              {renderKey(5)}
-              {renderKey(6)}
-              {renderKey('x')}
-              {renderKey(1)}
-              {renderKey(2)}
-              {renderKey(3)}
-              {renderKey('-')}
-              {renderKey(0)}
-              {renderKey('.')}
-              {renderKey('=')}
-              {renderKey('+')}
+            
+              <Key val='('/>
+              <Key val=')'/>
+              <Key val='%'/>
+              <Key val='CE'/>
+              <Key val='7'/>
+              <Key val='8'/>
+              <Key val='9'/>
+              <Key val='/'/>
+              <Key val='4'/>
+              <Key val='5'/>
+              <Key val='6'/>
+              <Key val='x'/>
+              <Key val='1'/>
+              <Key val='2'/>
+              <Key val='3'/>
+              <Key val='-'/>
+              <Key val='0'/>
+              <Key val='.'/>
+              <Key val='='/>
+              <Key val='+'/>
               
             </div>
           </div></>
       );
     }
-  }
+  
 
  
 
@@ -72,11 +74,13 @@ class Key extends React.Component {
 
 
 export default function Calculator() {
+ 
+
 
  
 
     return (
-      <Board/>
+      <Board />
       
     );
   }
