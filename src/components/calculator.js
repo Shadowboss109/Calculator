@@ -67,9 +67,17 @@ import React,  { useState } from "react"
 
         <button 
         className="key"
-        onClick={() => setInput(input+'%')}
+        onClick={() => {
+          if(input.length>0){
+          
+          setInput(input.slice(0, input.length-1))}
+
+
+
+        }}
+
         >
-          %
+          DEL
         </button>
         
         <button 
@@ -178,11 +186,11 @@ import React,  { useState } from "react"
         </button>
 
         <button 
-        className="key"
+        className="key equal"
         onClick={() => {
           
           try{
-          setInput(eval(input))
+          setInput(eval(input).toString())
         }
         catch{
           setInput('ERROR')
