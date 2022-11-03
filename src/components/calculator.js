@@ -29,6 +29,7 @@ import React,  { useState } from "react"
 
   // }
   
+  
       return (
         <>
         
@@ -178,7 +179,20 @@ import React,  { useState } from "react"
 
         <button 
         className="key"
-        onClick={() => setInput(eval(input))}
+        onClick={() => {
+          
+          try{
+          setInput(eval(input))
+        }
+        catch{
+          setInput('ERROR')
+
+        }
+        
+        
+        
+        }
+      }
         >
           =
         </button>
