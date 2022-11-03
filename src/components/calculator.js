@@ -37,7 +37,7 @@ import React,  { useState } from "react"
     
     
     try{
-      setInput(eval(input).toString())
+      setInput(Function("return "+ input)().toString())
     }
     catch{
       setInput('ERROR')
@@ -159,7 +159,7 @@ import React,  { useState } from "react"
         className="key"
         onClick={() => setInput(input+'*')}
         >
-          x
+          *
         </button>
 
         <button 
@@ -209,8 +209,10 @@ import React,  { useState } from "react"
         onClick={() => {
           
           try{
-          setInput(eval(input).toString())
+          setInput(Function("return "+ input)().toString())
         }
+
+
         catch{
           setInput('ERROR')
 
