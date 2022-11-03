@@ -22,3 +22,13 @@ input{
     border-radius: 10px;
     margin: 5px;
 }
+
+.key:hover {
+    background-color: #555555;
+    color: white;
+  }
+
+  .equal{
+    background-color: #555555;
+    color: white;
+  }

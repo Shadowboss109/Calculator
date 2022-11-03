@@ -28,6 +28,24 @@ import React,  { useState } from "react"
   // const handleClick=()=>{
 
   // }
+
+
+  // incase enter key is pressed
+  const handleSubmit=(e) =>{
+    e.preventDefault();
+    
+    
+    
+    try{
+      setInput(eval(input).toString())
+    }
+    catch{
+      setInput('ERROR')
+
+    }
+    
+    
+  }
   
   
       return (
@@ -38,13 +56,14 @@ import React,  { useState } from "react"
         </div>
 
         <div className="d-flex justify-content-center">
-        <form>
+        <form onSubmit={handleSubmit}> 
         <input
           type="text"
           name="text"
           autoComplete="off"
          value={input}
          onChange={e => setInput(e.target.value)}
+         
         />
         </form>
         </div>
